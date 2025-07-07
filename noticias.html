@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Explora Datos | Noticias</title>
+  <link rel="icon" href="img/grafico.png" type="image/png" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+  <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <i class="bi bi-bar-chart-line-fill"></i> Explora Datos
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav fs-5">
+        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+        <li class="nav-item"><a class="nav-link" href="enlaces.html">Enlaces</a></li>
+        <li class="nav-item"><a class="nav-link active" href="noticias.html">Noticias</a></li>
+      </ul>
+      <!-- Botón de modo oscuro -->
+      <button id="btnToggleDark" class="btn btn-outline-light ms-3" title="Modo oscuro" aria-label="Alternar modo oscuro">
+          <i class="bi bi-moon-fill"></i>
+        </button>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- Carrusel de noticias destacadas -->
+<div id="carouselNoticias" class="carousel slide container my-5" data-bs-ride="carousel">
+  <div class="carousel-inner rounded shadow">
+    <div class="carousel-item active">
+      <div class="row align-items-center">
+        <div class="col-md-7">
+          <img src="img/iaetica.jpg" class="d-block w-100 rounded" alt="Inteligencia Artificial y Ética" />
+        </div>
+        <div class="col-md-5">
+          <div class="carousel-caption text-start bg-dark bg-opacity-75 rounded p-3">
+            <h5>Inteligencia Artificial y Ética: Un debate necesario</h5>
+            <p>Descubre como la ética es clave para que la inteligencia artificial beneficie a todos.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <div class="row align-items-center">
+        <div class="col-md-7">
+          <img src="img/bigdatasalud.jpg" class="d-block w-100 rounded" alt="Big Data en Salud" />
+        </div>
+        <div class="col-md-5">
+          <div class="carousel-caption text-start bg-dark bg-opacity-75 rounded p-3">
+            <h5>Big Data y su impacto en la salud pública</h5>
+            <p>Cómo los datos están transformando la atención médica y la investigación.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <div class="row align-items-center">
+        <div class="col-md-7">
+          <img src="img/empresaydato.jpg" class="d-block w-100 rounded" alt="Visualización de Datos" />
+        </div>
+        <div class="col-md-5">
+          <div class="carousel-caption text-start bg-dark bg-opacity-75 rounded p-3">
+            <h5>El análisis de datos impulsa decisiones estratégicas</h5>
+            <p>El análisis de datos permite a las empresas tomar decisiones más inteligentes y mejorar sus procesos.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselNoticias" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Anterior</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselNoticias" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Siguiente</span>
+  </button>
+</div>
+ 
+
+  <!-- Buscador -->
+<main class="container my-5">
+  <h1 class="mb-4 text-center">Noticias y Artículos sobre Ciencia de Datos</h1>
+  
+  <div class="mb-4">
+    <input
+      type="text"
+      id="buscadorNoticias"
+      class="form-control form-control-lg"
+      placeholder="Buscar noticias..."
+      aria-label="Buscar noticias"
+    />
+  </div>
+
+  <div class="row gy-4" id="listaNoticias">
+
+  <article class="col-md-6">
+    <div class="card shadow-sm">
+      <img src="img/avancemachine.jpg" class="card-img-top" alt="Avances en Machine Learning" />
+      <div class="card-body">
+        <h5 class="card-title">Avances en Machine Learning para 2025</h5>
+        <p class="card-text"><small class="text-muted">Publicado: 1 de Julio de 2025</small></p>
+        <p class="card-text">
+          Las últimas investigaciones en machine learning están abriendo nuevas posibilidades para la predicción y análisis en tiempo real. Las redes neuronales profundas y los modelos de aprendizaje reforzado destacan en esta revolución tecnológica.
+        </p>
+        <a class="btn btn-primary" data-bs-toggle="collapse" href="#detalle1" role="button" aria-expanded="false" aria-controls="detalle1">
+          Leer más
+        </a>
+        <div class="collapse mt-3" id="detalle1">
+          <p>
+            Las redes neuronales profundas y los modelos de aprendizaje reforzado están revolucionando el sector, permitiendo mejorar la precisión y velocidad de análisis de grandes datos. Se esperan avances significativos en aplicaciones de IA en los próximos años.
+          </p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <article class="col-md-6">
+    <div class="card shadow-sm">
+      <img src="img/bigdatasalud.jpg" class="card-img-top" alt="Big Data en Salud" />
+      <div class="card-body">
+        <h5 class="card-title">Big Data y su impacto en la salud pública</h5>
+        <p class="card-text"><small class="text-muted">Publicado: 20 de Junio de 2025</small></p>
+        <p class="card-text">
+          El análisis masivo de datos está revolucionando la salud pública, permitiendo detectar patrones y mejorar diagnósticos. El uso responsable y ético de los datos es clave para lograr un impacto positivo.
+        </p>
+        <a class="btn btn-primary" data-bs-toggle="collapse" href="#detalle2" role="button" aria-expanded="false" aria-controls="detalle2">
+          Leer más
+        </a>
+        <div class="collapse mt-3" id="detalle2">
+          <p>
+            Las instituciones están adoptando tecnologías de análisis avanzado que integran datos en tiempo real para prever brotes y mejorar tratamientos, siempre con respeto a la privacidad y ética del paciente.
+          </p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <article class="col-md-6">
+    <div class="card shadow-sm">
+      <img src="img/datasecurity.jpg" class="card-img-top" alt="Visualización de Datos" />
+      <div class="card-body">
+        <h5 class="card-title">Análisis de datos para fortalecer la ciberseguridad</h5>
+        <p class="card-text"><small class="text-muted">Publicado: 15 de Junio de 2025</small></p>
+        <p class="card-text">
+          El análisis de grandes volúmenes de datos permite detectar amenazas en tiempo real, identificar patrones sospechosos y prevenir ciberataques antes de que ocurran.
+        </p>
+        <a class="btn btn-primary" data-bs-toggle="collapse" href="#detalle3" role="button" aria-expanded="false" aria-controls="detalle3">
+          Leer más
+        </a>
+        <div class="collapse mt-3" id="detalle3">
+          <p>
+            Gracias a tecnologías avanzadas, se monitorizan y analizan continuamente redes y sistemas para anticipar y bloquear ataques, protegiendo datos críticos y la infraestructura digital.
+          </p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <article class="col-md-6">
+    <div class="card shadow-sm">
+      <img src="img/iaetica.jpg" class="card-img-top" alt="Inteligencia Artificial y Ética" />
+      <div class="card-body">
+        <h5 class="card-title">Inteligencia Artificial y Ética: Un debate necesario</h5>
+        <p class="card-text"><small class="text-muted">Publicado: 5 de Julio de 2025</small></p>
+        <p class="card-text">
+          La ética en la inteligencia artificial es un tema que gana protagonismo. Reflexionamos sobre los desafíos y responsabilidades que conlleva el desarrollo de tecnologías inteligentes.
+        </p>
+        <a class="btn btn-primary" data-bs-toggle="collapse" href="#detalle4" role="button" aria-expanded="false" aria-controls="detalle4">
+          Leer más
+        </a>
+        <div class="collapse mt-3" id="detalle4">
+          <p>
+            Se discuten temas como la transparencia, el sesgo algorítmico, y la responsabilidad en decisiones automáticas para garantizar que la IA se use para el beneficio común sin riesgos éticos.
+          </p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+</div>
+
+  </div>
+  <p id="noResultados" class="text-center mt-4" style="display:none;">No se encontraron resultados.</p>
+</main>
+
+  <!-- Footer -->
+  <footer class="bg-primary text-light text-center py-4">
+    <p>© 2025 Explora Datos. Todos los derechos reservados.</p>
+    <p>
+      Síguenos en 
+      <a href="#" class="text-light mx-2"><i class="bi bi-facebook"></i></a>
+      <a href="#" class="text-light mx-2"><i class="bi bi-twitter"></i></a>
+      <a href="#" class="text-light mx-2"><i class="bi bi-linkedin"></i></a>
+      <a href="#" class="text-light mx-2"><i class="bi bi-instagram"></i></a>
+    </p>
+  </footer>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

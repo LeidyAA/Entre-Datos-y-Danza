@@ -1,143 +1,260 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Sitio dedicado a la danza y la ciencia de datos, explorando la unión entre arte y tecnología." />
-  <meta name="keywords" content="danza, ballet, ciencia de datos, análisis, tecnología, arte" />
-  <meta name="author" content="Leidy Andreina" />
-  
-  <title>Entre Datos y Danza</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Explora Datos - Transformamos datos en decisiones inteligentes. Servicios profesionales de ciencia de datos para optimizar tu negocio." />
+    <meta name="keywords" content="ciencia de datos, data analytics, machine learning, big data, visualización, consultoría" />
+    <meta name="author" content="Explora Datos" />
+    <title>Explora Datos | Ciencia de Datos Profesional</title>
+    <!-- Favicon -->
+    <link rel="icon" href="img/grafico.png" type="image/png" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
 
-  <!-- Favicon personalizado -->
-  <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css"/>
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Tu archivo JavaScript personalizado -->
+    <script src="scripts.js"></script>  <!-- Si tienes este archivo -->
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
-
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-
-  <!-- Bootstrap Icons -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
-
-  <!-- Estilos personalizados -->
-  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <!-- Barra de navegación -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+
+    <!-- Navegación -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#">Entre Datos y Danza</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <a class="navbar-brand" href="index.html">
+        <i class="bi bi-bar-chart-line-fill"></i> Explora Datos
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
-          <li class="nav-item"><a class="nav-link" href="politicas.html">Políticas de Privacidad</a></li>
-          <li class="nav-item"><a class="nav-link" href="enlaces.html">Enlaces de Interés</a></li>
-          <li class="nav-item"><a class="nav-link" href="noticias.html">Noticias</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav fs-5">
+                    <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="enlaces.html">Enlaces</a></li>
+                    <li class="nav-item"><a class="nav-link" href="noticias.html">Noticias</a></li>
+                </ul>
+                <button id="btnToggleDark" class="btn btn-outline-light ms-3" title="Modo oscuro" aria-label="Alternar modo oscuro">
+                   <i class="bi bi-moon-fill"></i>
+                </button>
 
-  <!-- Sección principal -->
-  <main class="container mt-5 pt-5">
-    <!-- Logo o frase identificativa -->
-    <header class="text-center mb-4">
-    <h1 class="display-4">Entre Datos y Danza</h1>
-    <p class="lead fst-italic">
-    Explorando el Ballet y la Ciencia de Datos: Un sitio único donde se fusionan la elegancia del ballet con el poder del análisis de datos.
-    </p>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header con logo y lema -->
+    <header class="text-center my-5">
+        <h1 class="display-4 fw-bold">Explora Datos</h1>
+        <p class="lead fst-italic"> Transformamos datos en decisiones inteligentes, ayudándote a descubrir patrones ocultos,
+        optimizar procesos y convertir la información en conocimiento útil para impulsar el éxito en cualquier área.</p>
     </header>
 
-    <!-- Carrusel Bootstrap -->
-    <div id="carouselExampleIndicators" class="carousel slide mb-5" data-bs-ride="carousel">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-      </div>
-      <div class="carousel-inner rounded">
-        <div class="carousel-item active">
-          <img src="img/ballet1.jpg" class="d-block w-100" alt="Bailarina de ballet" />
-          <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
-            <h5>El arte del ballet</h5>
-            <p>Elegancia y precisión en cada movimiento</p>
-          </div>
+    <!-- Carrusel -->
+    <div id="carouselExampleIndicators" class="carousel slide container mb-5" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+      aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+      aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+      aria-label="Slide 3"></button>
+  </div>
+
+  <div class="carousel-inner rounded shadow">
+    <div class="carousel-item active">
+      <div class="row align-items-center">
+        <div class="col-md-7">
+          <img src="img/analisis de datos.jpg" class="d-block w-100 rounded" alt="Análisis de datos" />
         </div>
-        <div class="carousel-item">
-          <img src="img/datos1.jpg" class="d-block w-100" alt="Gráficos de datos" />
-          <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
-            <h5>Ciencia de datos aplicada</h5>
-            <p>Visualización y análisis para comprender el movimiento</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src="img/ballet-datos.jpg" class="d-block w-100" alt="Bailarina con gráficos" />
-          <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
-            <h5>Fusión entre arte y tecnología</h5>
-            <p>Cómo la ciencia de datos transforma la danza</p>
+        <div class="col-md-5">
+          <div class="carousel-caption text-start bg-dark bg-opacity-75 rounded p-3">
+            <h5>Análisis de Datos</h5>
+            <p>Descubre patrones y tendencias ocultas en tus datos.</p>
           </div>
         </div>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Anterior</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Siguiente</span>
-      </button>
     </div>
 
-    <!-- Contenido informativo -->
-    <section>
-      <h2>¿Qué es el ballet?</h2>
-      <p>El ballet es una forma de danza que se caracteriza por su técnica precisa y elegancia. Originado en la corte francesa, se ha convertido en una expresión artística universal.</p>
+    <div class="carousel-item">
+      <div class="row align-items-center">
+        <div class="col-md-7">
+          <img src="img/machine learning.jpg" class="d-block w-100 rounded" alt="Machine Learning" />
+        </div>
+        <div class="col-md-5">
+          <div class="carousel-caption text-start bg-dark bg-opacity-75 rounded p-3">
+            <h5>Machine Learning</h5>
+            <p>Automatización inteligente para optimizar decisiones.</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
-      <h2>¿Qué es la ciencia de datos?</h2>
-      <p>La ciencia de datos es una disciplina que utiliza técnicas estadísticas, matemáticas y de computación para extraer conocimiento de los datos.</p>
+    <div class="carousel-item">
+      <div class="row align-items-center">
+        <div class="col-md-7">
+          <img src="img/graficos.jpg" class="d-block w-100 rounded" alt="Visualización de datos" />
+        </div>
+        <div class="col-md-5">
+          <div class="carousel-caption text-start bg-dark bg-opacity-75 rounded p-3">
+            <h5>Visualizaciones y Gráficos</h5>
+            <p>Convierte datos complejos en gráficos claros y comprensibles.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-      <h2>Aplicación de la ciencia de datos en la danza</h2>
-      <p>Mediante sensores y análisis de movimiento, la ciencia de datos permite optimizar el rendimiento de bailarines, prevenir lesiones y mejorar la coreografía.</p>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+    data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Anterior</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+    data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Siguiente</span>
+  </button>
+</div>
 
-      <h3>Pasos básicos del ballet</h3>
+
+    <!-- Sección Misión, Visión y Valores -->
+    <section class="container mb-5">
+        <div class="row text-center">
+            <div class="col-md-4">
+                <h2>Misión</h2>
+                <p>Proveer soluciones avanzadas en ciencia de datos para que empresas de cualquier tamaño puedan optimizar sus procesos, descubrir oportunidades de negocio y tomar decisiones basadas en información confiable y precisa.</p>
+            </div>
+            <div class="col-md-4">
+                <h2>Visión</h2>
+                <p>Ser la empresa líder en Latinoamérica en servicios de ciencia de datos, innovación tecnológica y análisis predictivo, generando valor sostenible para nuestros clientes.</p>
+            </div>
+            <div class="col-md-4">
+                <h2>Valores</h2>
+                <ul class="list-unstyled">
+                    <li> Innovación</li>
+                    <li>Transparencia</li>
+                    <li>Compromiso</li>
+                    <li>Colaboración</li>
+                    <li>Excelencia</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios -->
+    <section class="container mb-5">
+        <h2 class="mb-3 text-center">Nuestros Servicios</h2>
+        <ol class="fs-5">
+            <li>Análisis predictivo y modelado estadístico.</li>
+            <li>Implementación de soluciones de Machine Learning.</li>
+            <li>Visualización avanzada de datos.</li>
+            <li>Consultoría en transformación digital basada en datos.</li>
+            <li>Capacitación en Ciencia de Datos para equipos empresariales.</li>
+        </ol>
+    </section>
+
+    <!-- Beneficios -->
+    <section class="container mb-5">
+        <h2 class="mb-3 text-center">Beneficios de nuestros servicios</h2>
+        <ul class="fs-5">
+            <li>Toma de decisiones basada en datos reales.</li>
+            <li>Reducción de costos mediante optimización de procesos.</li>
+            <li>Detección de nuevas oportunidades de negocio.</li>
+            <li>Mejora en la experiencia del cliente.</li>
+            <li>Automatización inteligente.</li>
+        </ul>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-light text-center py-3">
+        <p>© 2025 Explora Datos. Todos los derechos reservados.</p>
+        <p>
+            Síguenos en 
+            <a href="#" class="text-light"><i class="bi bi-facebook"></i></a> 
+            <a href="#" class="text-light ms-2"><i class="bi bi-twitter"></i></a> 
+            <a href="#" class="text-light ms-2"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="text-light ms-2" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        </p>
+   
+      <!-- Aquí pones el botón para abrir el modal -->
+  <button type="button" class="btn btn-link text-decoration-none text-light" data-bs-toggle="modal" data-bs-target="#politicasModal">
+    Políticas de Privacidad
+  </button>
+</footer>
+
+
+<!-- Modal de Políticas de Privacidad -->
+<div class="modal fade" id="politicasModal" tabindex="-1" aria-labelledby="politicasModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+  <div class="modal-content">
+    <div class="modal-header bg-primary text-white">
+      <h5 class="modal-title" id="politicasModalLabel">Políticas de Privacidad - Explora Datos</h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+    </div>
+    <div class="modal-body">
+      <p>
+        En <strong>Explora Datos</strong> valoramos la privacidad y la seguridad de tus datos personales. Esta política describe cómo recopilamos, usamos y protegemos tu información cuando interactúas con nuestros servicios.
+      </p>
+
+      <h6><i class="bi bi-file-text"></i> Información que recopilamos</h6>
+      <ul>
+        <li>Nombre completo</li>
+        <li>Correo electrónico</li>
+        <li>Teléfono (si lo proporcionas)</li>
+        <li>Información que compartas en mensajes o solicitudes</li>
+      </ul>
+
+      <h6><i class="bi bi-person-check"></i> Uso de la información</h6>
       <ol>
-        <li>Primero: Posición de brazos y pies</li>
-        <li>Segundo: Equilibrio y postura</li>
-        <li>Tercero: Saltos y giros</li>
-        <li>Cuarto: Expresión corporal</li>
+        <li>Responder a tus consultas y solicitudes.</li>
+        <li>Mejorar nuestros servicios y comunicación.</li>
+        <li>Enviar información relevante y actualizaciones.</li>
+        <li>Cumplir con obligaciones legales y de seguridad.</li>
       </ol>
 
-      <h3>Estilos de danza más populares</h3>
+      <h6><i class="bi bi-shield-lock"></i> Compartir datos con terceros</h6>
+      <p>No vendemos, alquilamos ni compartimos tu información personal con terceros para fines comerciales. Podemos compartir datos con proveedores de servicios estrictamente para la operación de nuestros servicios, siempre bajo acuerdos de confidencialidad y seguridad.</p>
+
+      <h6><i class="bi bi-lock-fill"></i> Seguridad de la información</h6>
+      <p>Implementamos medidas técnicas y organizativas para proteger tus datos contra accesos no autorizados, pérdidas o alteraciones. Nuestro equipo revisa y actualiza continuamente estas medidas para garantizar la máxima seguridad.</p>
+
+      <h6><i class="bi bi-person-lines-fill"></i> Derechos del usuario</h6>
       <ul>
-        <li>Ballet clásico</li>
-        <li>Danza contemporánea</li>
-        <li>Jazz</li>
-        <li>Hip-hop</li>
-        <li>Danza folclórica</li>
+        <li>Acceder a tus datos personales que poseemos.</li>
+        <li>Solicitar la corrección o actualización de tu información.</li>
+        <li>Solicitar la eliminación de tus datos cuando no haya obligación legal para conservarlos.</li>
+        <li>Oponerte al tratamiento de tus datos para ciertos fines.</li>
+        <li>Solicitar la portabilidad de tus datos.</li>
       </ul>
-    </section>
-  </main>
+      <p>Para ejercer estos derechos, contáctanos a través del correo <a href="mailto:privacidad@exploradatos.com">privacidad@exploradatos.com</a>.</p>
 
-  <!-- Botón para modo oscuro -->
-  <button id="darkModeToggle" class="btn btn-secondary position-fixed bottom-0 end-0 m-3" title="Activar / Desactivar modo oscuro">
-    <i class="bi bi-moon"></i> Modo Oscuro
-  </button>
+      <h6><i class="bi bi-pencil-square"></i> Cambios en la política</h6>
+      <p>Podemos actualizar esta política periódicamente para reflejar cambios legales o mejoras en nuestras prácticas. Te recomendamos revisar esta página con regularidad. Cualquier cambio significativo será comunicado a través de nuestros canales oficiales.</p>
 
-  <!-- Footer -->
-  <footer class="bg-dark text-white text-center py-3 mt-5">
-    <p>© 2025 Leidy Andreina - Entre Datos y Danza</p>
-  </footer>
+      <h6><i class="bi bi-envelope-check"></i> Contacto para privacidad</h6>
+      <p>Si tienes dudas o inquietudes sobre nuestras políticas de privacidad, no dudes en contactarnos en <a href="mailto:privacidad@exploradatos.com">privacidad@exploradatos.com</a>.</p>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+    </div>
+  </div>
+</div>
 
-  <!-- Bootstrap JS y dependencias -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-  <!-- JS personalizado -->
-  <script src="js/script.js"></script>
+</div>
+  
+    <!-- Bootstrap JS Bundle (Popper + Bootstrap) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+    
 </body>
 </html>

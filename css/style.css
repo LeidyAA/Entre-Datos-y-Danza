@@ -1,0 +1,319 @@
+/* ----------- FUENTE GENERAL ----------- */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f0f8ff; /* azul claro */
+  color: #000000; /* negro para los párrafos */
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  padding-top: 70px; /* para evitar que el navbar tape contenido */
+}
+
+/* TÍTULOS GENERALES */
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  color: #ffcc00; /* amarillo */
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  color: #072b61; /* azul marino */
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* SUBTÍTULOS (usa h3 y h5 como subtítulo azul marino) */
+h3{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: #d20508; /* azul marino */
+  margin-top: 1.2rem;
+  margin-bottom: 0.8rem;
+}
+
+/* ----------- NAVBAR ----------- */
+.navbar {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+}
+
+.nav-link {
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #ffc107 !important;
+  text-decoration: underline;
+}
+
+/* ----------- CARRUSEL 1 ----------- */
+#carouselExampleIndicators {
+  max-width: 700px;  /* Controla el ancho total del carrusel */
+  margin: 40px auto; /* Centra horizontalmente y da margen arriba/abajo */
+}
+
+#carouselExampleIndicators .carousel-inner {
+  max-height: 400px; /* Altura máxima del contenedor de imágenes */
+  overflow: hidden;  /* Para que no se desborde si la imagen es grande */
+  border-radius: 10px;
+}
+
+#carouselExampleIndicators .carousel-inner img {
+  max-height: 400px; /* Limita la altura de la imagen */
+  width: 100%;       /* Que ocupe todo el ancho del contenedor (max 700px) */
+  object-fit: cover; /* Que recorte si es necesario para cubrir el área */
+  display: block;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+.carousel-caption {
+  position: static; /* Para que no quede sobre la imagen */
+  color: #fff;
+}
+
+.carousel-item img {
+  max-height: 400px; /* Controla la altura */
+  object-fit: cover;
+}
+
+.carousel-inner .row {
+  margin: 0; /* Quitar márgenes negativos del row */
+}
+
+/* ----------- CARRUSEL 2 ----------- */
+#carouselNoticias .carousel-inner img {
+  height: 300px;       /* Tamaño más pequeño para las imágenes */
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+#carouselNoticias .carousel-caption {
+  position: static;    /* Para que no se superponga a la imagen */
+  background-color: rgba(13, 110, 253, 0.75);
+  border-radius: 10px;
+  padding: 1rem;
+  color: #f8f9fa;
+  text-align: left;
+  margin-left: 10px;   /* Espacio entre imagen y texto */
+  height: 300px;       /* Mismo alto que la imagen para alinearlo */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#carouselNoticias .carousel-caption h5 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+#carouselNoticias .carousel-caption p {
+  font-size: 1rem;
+  margin: 0;
+}
+
+
+/* Listas generales */
+section.container ul.list-unstyled li {
+  font-weight: 600; /* peso general para listas */
+  color: #222222;
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+  letter-spacing: 0.5px;
+}
+
+/* En modo oscuro */
+.dark-mode section.container ul.list-unstyled li {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* Ajuste especial para "Valores" para que sea menos grueso */
+section.container > .row > .col-md-4:nth-child(3) ul.list-unstyled li {
+  font-weight: 500; /* más ligero que 600 */
+}
+
+/* Lo mismo en modo oscuro */
+.dark-mode section.container > .row > .col-md-4:nth-child(3) ul.list-unstyled li {
+  font-weight: 500;
+}
+
+
+
+/* ----------- BOTÓN MODO OSCURO ----------- */
+#btnToggleDark {
+  z-index: 9999;
+  font-weight: 600;
+}
+
+/* Icono del botón modo oscuro */
+#btnToggleDark i {
+  color: white; /* color inicial */
+  transition: color 0.3s ease; /* transición suave */
+  cursor: pointer;
+}
+
+#btnToggleDark:hover i {
+  color: #ffc107; /* amarillo al pasar mouse */
+}
+
+/* Modo oscuro - estilos generales */
+.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.dark-mode .navbar {
+  background-color: #212529 !important;
+  box-shadow: none;
+}
+
+.dark-mode .nav-link {
+  color: #e0e0e0 !important;
+}
+
+.dark-mode .nav-link:hover {
+  color: #ffc107 !important;
+  text-decoration: underline;
+}
+
+.dark-mode .carousel-caption {
+  background-color: rgba(255, 193, 7, 0.75);
+}
+
+.dark-mode footer {
+  background-color: #212529 !important;
+  color: #e0e0e0 !important;
+}
+
+/* En modo oscuro, icono botón modo oscuro */
+.dark-mode #btnToggleDark i {
+  color: #e0e0e0;
+}
+
+.dark-mode #btnToggleDark:hover i {
+  color: #ffc107;
+}
+
+
+/* ----------- FOOTER ----------- */
+footer {
+  background-color: #0d6efd;
+  color: white;
+  padding: 1rem 0;
+  margin-top: 3rem;
+}
+
+footer .social-icons a {
+  color: white;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+footer .social-icons a:hover {
+  color: #ffc107;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px; 
+  height: 1px;
+  padding: 0; 
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* ----------- EFECTOS HOVER ----------- */
+a:hover,
+button:hover {
+  cursor: pointer;
+  text-decoration: none;
+  color: #ffc107 !important;
+  transition: color 0.3s ease;
+}
+
+section p,
+section li {
+  font-size: 1.1rem;
+}
+
+/* ----------- RESPONSIVE ----------- */
+@media (max-width: 576px) {
+  .carousel-inner img {
+    height: 250px;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  .navbar-brand {
+    font-size: 1.4rem;
+  }
+}
+
+.testimonio-box {
+  background-color: #f8f9fa; /* color claro, suave */
+  border: 1px solid #ddd;    /* borde delgado */
+  padding: 0.75rem 1rem;     /* menos padding */
+  border-radius: 6px;
+  box-shadow: none;          /* sin sombra para que no empuje */
+  
+  width: 50%;                /* ancho fijo menor a la mitad */
+  margin-right: auto;        /* para que se quede a la izquierda */
+}
+
+.testimonio-box blockquote {
+  margin-bottom: 0;
+  font-style: italic;
+  color: #333;
+}
+
+@media (prefers-color-scheme: dark) {
+  .testimonio-box {
+    background-color: #2a2a2a;
+    border-color: #444;
+    color: #ccc;
+  }
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+h1:hover,
+h2:hover,
+h3:hover,
+h4:hover,
+h5:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease, color 0.3s ease;
+  color: #0d6efd; /* o cualquier color que te guste */
+  cursor: pointer;
+}
+
+.lead:hover {
+  transform: scale(1.03);
+  transition: transform 0.3s ease, color 0.3s ease;
+  color: #0d6efd;
+  cursor: pointer;
+}
+
+#listaNoticias article {
+  transition: opacity 0.3s ease;
+}
