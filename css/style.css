@@ -135,11 +135,15 @@ section.container ul.list-unstyled li {
   letter-spacing: 0.5px;
 }
 
-/* En modo oscuro */
-.dark-mode section.container ul.list-unstyled li {
-  color: #ffffff;
-  font-weight: 600;
+.custom-bg {
+  background-color: #9aa8c0;
 }
+
+.dark-mode .card .card-text li {
+  color: #b0b8c1; /* gris azulado suave */
+  font-weight: 500;
+}
+
 
 /* Ajuste especial para "Valores" para que sea menos grueso */
 section.container > .row > .col-md-4:nth-child(3) ul.list-unstyled li {
@@ -184,6 +188,21 @@ section.container > .row > .col-md-4:nth-child(3) ul.list-unstyled li {
 .dark-mode .nav-link {
   color: #e0e0e0 !important;
 }
+
+/* Solo en modo oscuro: letras de listas en cards, servicios y beneficios más suaves */
+.dark-mode section ol.fs-5 li,
+.dark-mode section ul.fs-5 li {
+color: #cfd8dc;
+font-weight: 400;
+}
+
+/* -- Corrección específica para el card de "Valores" -- */
+.dark-mode section.container > .row > .col-md-4:nth-child(3) ul.list-unstyled li {
+  color: #000000 !important;
+  font-weight: 500;
+}
+
+
 
 .dark-mode .nav-link:hover {
   color: #ffc107 !important;
@@ -251,6 +270,7 @@ section p,
 section li {
   font-size: 1.1rem;
 }
+
 
 /* ----------- RESPONSIVE ----------- */
 @media (max-width: 576px) {
